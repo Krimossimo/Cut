@@ -1,0 +1,10 @@
+{
+  "name": "cut",
+  "productName": "Cut",
+  "version": "1.1.0",
+  "description": "Cut — découpe rapide et sans perte de vidéos",
+  "main": "main.js",
+  "author": "Krimossimo",
+  "license": "UNLICENSED",
+  "private": true
+}

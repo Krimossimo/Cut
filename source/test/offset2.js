@@ -1,0 +1,20 @@
+const { _electron } = require('playwright'); const fs=require('fs'), os=require('os'), path=require('path');
+(async () => {
+  const ud = fs.mkdtempSync(path.join(os.tmpdir(), 'cutud-'));
+  const app = await _electron.launch({ executablePath: '/root/el-linux/electron', args: ['--no-sandbox', '/root/cut/app', '/root/work/media/shifted.mp4'], env: { ...process.env, CUT_USER_DATA: ud, CUT_FFMPEG_DIR: '/root/dl/fflinux/bin' } });
+  const win = await app.firstWindow();
+  await win.waitForFunction(() => document.getElementById('video').readyState >= 2, null, {timeout: 10000});
+  await win.waitForTimeout(400);
+  await win.locator('#video').screenshot({ path: '/tmp/o_start.png' });
+  console.log('time shown at load', await win.innerText('#timeCurrent'));
+  await win.fill('#inStart', '11.3'); await win.press('#inStart', 'Enter');
+  await win.waitForFunction(() => { const s = window.__cutState; return s.keyframes && Math.abs(s.keyframes.forIn - 11.3) < 1e-6; });
+  console.log('kf', JSON.stringify((await win.evaluate(() => window.__cutState.keyframes)).prev));
+  await win.waitForTimeout(500);
+  await win.locator('#video').screenshot({ path: '/tmp/o_in.png' });
+  await win.click('#btnPreview'); await win.waitForTimeout(60);
+  await win.evaluate(() => document.getElementById('video').pause());
+  await win.waitForTimeout(300);
+  await win.locator('#video').screenshot({ path: '/tmp/o_prev.png' });
+  await app.close();
+})();

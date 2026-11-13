@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="150 100 270 312">
+  <defs>
+    <clipPath id="L"><polygon points="-200,-200 318,-200 210,712 -200,712"/></clipPath>
+    <clipPath id="R"><polygon points="318,-200 712,-200 712,712 210,712"/></clipPath>
+    <path id="tri" d="M176 134 Q176 108 198 121 L378 233 Q400 256 378 279 L198 391 Q176 404 176 378 Z"/>
+  </defs>
+  <g clip-path="url(#L)" transform="translate(-11,-6)"><use href="#tri" fill="#F4F4F5"/></g>
+  <g clip-path="url(#R)" transform="translate(13,7)"><use href="#tri" fill="#FF5A36"/></g>
+</svg>
