@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cut — Découpez vos VOD sans perte de qualité</title>
+  <meta name="description" content="Cut découpe vos VOD Twitch et vos vidéos en quelques secondes, sans réencodage : codecs, résolution, framerate et audio restent identiques à l'original. Gratuit, pour Windows.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cut — Coupez vos VOD. Gardez la qualité.">
+  <meta property="og:description" content="Découpe vidéo sans réencodage pour Windows. Gratuit, FFmpeg inclus.">
+  <meta property="og:url" content="https://krimossimo.github.io/Cut/">
+  <meta property="og:image" content="https://krimossimo.github.io/Cut/assets/img/og-image.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js"></script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <!-- ─────────────────────────────── En-tête -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Cut — accueil">
+        <img src="assets/img/mark.svg" alt="" width="18" height="21">
+        <span>Cut</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#debut-exact">Début exact</a>
+        <a href="#telecharger">Télécharger</a>
+        <a href="#faq">FAQ</a>
+        <a href="#a-propos">À propos</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-link" data-link="github-repo" href="#" aria-label="Code source sur GitHub" title="Code source sur GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="stroke"><path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.5 5l-3 14" /></svg>
+        </a>
+        <a class="btn btn-small btn-primary" href="#telecharger">Télécharger</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ─────────────────────────────── Hero -->
+    <section class="hero">
+      <div class="wrap hero-text">
+        <p class="eyebrow"><span class="dot"></span> Gratuit · pour Windows</p>
+        <h1>Coupez vos VOD.<br><span class="muted-strong">Gardez la qualité.</span></h1>
+        <p class="lead">
+          Cut découpe vos VOD Twitch et vos vidéos en quelques secondes, <strong>sans réencodage</strong>&nbsp;:
+          codecs, résolution, framerate et audio restent identiques à l'original.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-large" data-download="setup" href="#telecharger">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="stroke"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5" /><path d="M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17" /></svg>
+            Télécharger pour Windows
+          </a>
+          <a class="btn btn-ghost btn-large" href="#fonctionnalites">Découvrir</a>
+        </div>
+        <p class="meta" id="heroMeta">Version <span data-field="version">1.1.0</span> · Windows 10 et 11 (64 bits) · <span data-field="setup-size">146 Mo</span></p>
+      </div>
+      <div class="wrap">
+        <figure class="shot shot-hero">
+          <img src="assets/img/cut-editeur.webp" width="2200" height="1375"
+               alt="L'éditeur de Cut : lecteur vidéo, barre de découpe avec le début et la fin en orange, durée du clip et bouton Exporter.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── Chiffres -->
+    <section class="strip" aria-label="En bref">
+      <div class="wrap strip-grid">
+        <div><strong>0&nbsp;%</strong><span>de perte de qualité</span></div>
+        <div><strong>≈&nbsp;1&nbsp;s</strong><span>pour exporter un clip</span></div>
+        <div><strong>FFmpeg</strong><span>inclus, rien à installer</span></div>
+        <div><strong>100&nbsp;%</strong><span>gratuit, sans compte</span></div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── Fonctionnalités -->
+    <section class="section" id="fonctionnalites">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Fonctionnalités</p>
+          <h2>Tout ce qu'il faut pour couper.<br>Rien de plus.</h2>
+          <p class="section-lead">Ouvrez une vidéo, placez le début et la fin, exportez. Cut est pensé pour être compris en dix secondes.</p>
+        </header>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" /><path d="m16 15 2 2 3-4" /></svg></div>
+            <h3>Sans réencodage</h3>
+            <p>Les flux vidéo et audio sont copiés tels quels avec FFmpeg (<code>-c copy</code>). Le clip est identique, bit à bit, à votre vidéo d'origine.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18" /><path d="M5 8h4M5 16h4M15 8h4M15 16h4" /><circle cx="12" cy="12" r="2.2" /></svg></div>
+            <h3>Début exact</h3>
+            <p>Le clip commence pile où vous l'avez placé. Seules les ~2 s jusqu'à la première image clé sont réencodées&nbsp;; tout le reste est copié sans perte.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 13h6l-1 8 8-10h-6z" /></svg></div>
+            <h3>Instantané</h3>
+            <p>Pas de recalcul de l'image&nbsp;: couper quelques minutes d'une VOD de six heures prend une seconde, pas une demi-heure.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2" /><path d="m10 9 4 2-4 2z" /><path d="M8 21h8" /></svg></div>
+            <h3>Lecteur et aperçu</h3>
+            <p>Lecteur intégré, navigation image par image, et un aperçu qui lit exactement le passage qui sera exporté.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg></div>
+            <h3>Au millième près</h3>
+            <p>Définissez le début et la fin à la position actuelle, ou tapez un temps&nbsp;: <code>1:02:03.5</code>, <code>95</code>, <code>1h02m03s</code>…</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z" /><path d="M14 3v4h4" /><path d="M9 13h6M9 17h4" /></svg></div>
+            <h3>Formats courants</h3>
+            <p>MP4, MKV, MOV, TS, WebM, FLV… Glissez-déposez votre fichier dans la fenêtre, exportez en MP4, MKV ou MOV.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── Début exact expliqué -->
+    <section class="section section-alt" id="debut-exact">
+      <div class="wrap split">
+        <div class="split-text">
+          <p class="kicker">Sous le capot</p>
+          <h2>Un début exact,<br>sans sacrifier la qualité.</h2>
+          <p>
+            Une vidéo compressée n'enregistre une image complète, appelée <strong>image clé</strong>, que toutes les 1 à
+            2 secondes. Les images intermédiaires ne stockent que les différences. Sans réencodage, un clip ne peut donc
+            commencer que sur une image clé.
+          </p>
+          <p>
+            Cut contourne la limite intelligemment&nbsp;: il réencode en très haute qualité <strong>uniquement</strong> le court
+            passage entre votre point et la première image clé, puis copie tout le reste tel quel. Chaque export est
+            ensuite vérifié image par image à la jonction.
+          </p>
+          <ul class="checks">
+            <li>Le reste du clip&nbsp;: identique bit à bit à la source</li>
+            <li>L'audio&nbsp;: toujours l'original, jamais retouché</li>
+            <li>Mode «&nbsp;Sans perte&nbsp;» disponible pour ne rien réencoder du tout</li>
+          </ul>
+        </div>
+        <figure class="diagram" aria-label="Schéma : seul le passage entre votre point de début et la première image clé est réencodé, le reste est copié tel quel.">
+          <svg viewBox="0 0 560 300" role="img" aria-hidden="true">
+            <defs>
+              <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="8" height="8" fill="rgba(255,90,54,0.18)" />
+                <rect width="3" height="8" fill="rgba(255,90,54,0.55)" />
+              </pattern>
+            </defs>
+            <!-- Piste source -->
+            <text x="20" y="40" class="d-label">Votre vidéo</text>
+            <rect x="20" y="54" width="520" height="40" rx="8" class="d-track" />
+            <g class="d-key">
+              <line x1="60" y1="54" x2="60" y2="94" /><line x1="160" y1="54" x2="160" y2="94" />
+              <line x1="260" y1="54" x2="260" y2="94" /><line x1="360" y1="54" x2="360" y2="94" />
+              <line x1="460" y1="54" x2="460" y2="94" />
+            </g>
+            <line x1="212" y1="44" x2="212" y2="104" class="d-in" />
+            <text x="212" y="124" text-anchor="middle" class="d-small d-accent">votre début</text>
+            <text x="260" y="124" text-anchor="start" class="d-small" dx="12">image clé</text>
+            <path d="M260 108v-6" class="d-key-mark" />
+            <!-- Résultat -->
+            <text x="20" y="180" class="d-label">Le clip exporté</text>
+            <rect x="212" y="194" width="48" height="40" rx="6" fill="url(#hatch)" stroke="#ff5a36" stroke-width="1.5" />
+            <rect x="262" y="194" width="278" height="40" rx="6" class="d-copy" />
+            <text x="236" y="256" text-anchor="middle" class="d-small d-accent">≤ 2 s réencodées</text>
+            <text x="401" y="219" text-anchor="middle" class="d-copy-text">copié tel quel, bit à bit</text>
+            <path d="M212 104 L212 194" class="d-dash" />
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── Comment ça marche -->
+    <section class="section" id="comment">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Comment ça marche</p>
+          <h2>Trois étapes. Pas une de plus.</h2>
+        </header>
+        <div class="steps-layout">
+          <ol class="steps" role="tablist" aria-label="Étapes">
+            <li>
+              <button class="step is-active" role="tab" aria-selected="true" data-shot="accueil">
+                <span class="step-num">1</span>
+                <span class="step-body"><strong>Ouvrez votre vidéo</strong>
+                  <span>Glissez-la dans la fenêtre ou choisissez-la dans l'explorateur. Cut l'analyse instantanément.</span></span>
+              </button>
+            </li>
+            <li>
+              <button class="step" role="tab" aria-selected="false" data-shot="editeur">
+                <span class="step-num">2</span>
+                <span class="step-body"><strong>Placez le début et la fin</strong>
+                  <span>Avec les bornes orange, les boutons <kbd>I</kbd> et <kbd>O</kbd>, ou en tapant les temps. Vérifiez avec l'aperçu.</span></span>
+              </button>
+            </li>
+            <li>
+              <button class="step" role="tab" aria-selected="false" data-shot="export">
+                <span class="step-num">3</span>
+                <span class="step-body"><strong>Exportez</strong>
+                  <span>Choisissez le dossier et le nom. Le clip est prêt en une seconde, puis «&nbsp;Nouvelle découpe&nbsp;» sans recharger.</span></span>
+              </button>
+            </li>
+          </ol>
+          <figure class="shot shot-steps">
+            <img id="stepShot" src="assets/img/cut-accueil.webp" width="2200" height="1375"
+                 alt="Écran d'accueil de Cut : zone de dépôt « Glissez une vidéo ici ».">
+          </figure>
+        </div>
+        <div class="shortcuts" aria-label="Raccourcis clavier">
+          <span><kbd>Espace</kbd> lecture</span>
+          <span><kbd>I</kbd> / <kbd>O</kbd> début / fin</span>
+          <span><kbd>P</kbd> aperçu</span>
+          <span><kbd>←</kbd> <kbd>→</kbd> ±1 s</span>
+          <span><kbd>,</kbd> <kbd>.</kbd> image par image</span>
+          <span><kbd>Ctrl</kbd>+<kbd>E</kbd> exporter</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── Télécharger -->
+    <section class="section section-alt" id="telecharger">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Télécharger</p>
+          <h2>Cut <span data-field="version">1.1.0</span> pour Windows</h2>
+          <p class="section-lead">Gratuit, sans compte, sans publicité. Aucun droit administrateur nécessaire.</p>
+        </header>
+        <div class="download">
+          <div class="download-card">
+            <div class="download-top">
+              <img src="assets/img/logo.svg" alt="" width="64" height="64">
+              <div>
+                <h3>Installateur</h3>
+                <p>Recommandé · raccourci Bureau et menu Démarrer, désinstallation depuis Windows</p>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-large btn-block" data-download="setup" href="#">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5" /><path d="M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17" /></svg>
+              <span>Télécharger <span class="file-name" data-field="setup-name">Cut-Setup-1.1.0.exe</span></span>
+            </a>
+            <p class="download-meta"><span data-field="setup-size">146 Mo</span> · publié le <span data-field="date">1 novembre 2026</span><span data-field="downloads"></span></p>
+            <div class="divider"></div>
+            <div class="alt-download">
+              <div>
+                <strong>Version portable</strong>
+                <span>Un seul fichier, sans installation</span>
+              </div>
+              <a class="btn btn-secondary" data-download="portable" href="#">
+                <span data-field="portable-size">146 Mo</span>
+              </a>
+            </div>
+            <details class="hashes">
+              <summary>Empreintes SHA-256</summary>
+              <dl>
+                <dt data-field="setup-name">Cut-Setup-1.1.0.exe</dt><dd><code data-field="setup-sha">—</code></dd>
+                <dt data-field="portable-name">Cut-1.1.0-Portable.exe</dt><dd><code data-field="portable-sha">—</code></dd>
+              </dl>
+            </details>
+            <p class="download-links">
+              <a data-link="release-notes" href="#">Notes de version</a> · <a data-link="releases" href="#">Toutes les versions</a>
+            </p>
+          </div>
+
+          <div class="install-guide">
+            <h3>Installation</h3>
+            <ol class="install-steps">
+              <li><strong>Lancez l'installateur</strong> téléchargé.</li>
+              <li>
+                <strong>Si Windows affiche «&nbsp;Windows a protégé votre ordinateur&nbsp;»</strong>, cliquez sur
+                <em>Informations complémentaires</em> puis <em>Exécuter quand même</em>. Cut n'est pas signé avec un
+                certificat commercial payant, d'où cet avertissement.
+              </li>
+              <li><strong>Suivez les deux écrans</strong>&nbsp;: Cut s'installe dans votre profil et crée un raccourci sur le Bureau.</li>
+            </ol>
+            <div class="requirements">
+              <h4>Configuration</h4>
+              <ul>
+                <li>Windows 10 ou 11, 64 bits</li>
+                <li>≈ 500 Mo d'espace disque</li>
+                <li>Aucune connexion Internet nécessaire</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="kicker">Questions fréquentes</p>
+          <h2>Bon à savoir</h2>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>La qualité est-elle vraiment identique à l'original&nbsp;?</summary>
+            <p>Oui. Cut copie les flux compressés sans les décoder ni les recalculer&nbsp;: le codec, la résolution, le framerate, le débit et l'audio sont ceux de votre fichier. En mode «&nbsp;Début exact&nbsp;», seules les premières secondes (jusqu'à la première image clé) sont réencodées en très haute qualité, visuellement identique. Le mode «&nbsp;Sans perte&nbsp;» ne réencode rien du tout.</p>
+          </details>
+          <details>
+            <summary>Pourquoi Windows affiche-t-il un avertissement SmartScreen&nbsp;?</summary>
+            <p>Windows avertit pour tout programme qui n'est pas signé avec un certificat commercial (plusieurs centaines d'euros par an). Cliquez sur <em>Informations complémentaires</em> puis <em>Exécuter quand même</em>. Vous pouvez vérifier que votre fichier est bien l'original grâce à son empreinte SHA-256, indiquée dans la section Télécharger.</p>
+          </details>
+          <details>
+            <summary>Quels formats sont pris en charge&nbsp;?</summary>
+            <p>Cut ouvre les formats courants&nbsp;: MP4, MKV, MOV, M4V, TS, WebM, FLV et AVI. Il exporte en MP4, MKV ou MOV (par défaut dans le format d'origine). Le lecteur intégré affiche le H.264, le HEVC, le VP9 et l'AV1&nbsp;; pour un codec qu'il ne sait pas afficher, la découpe fonctionne quand même.</p>
+          </details>
+          <details>
+            <summary>Faut-il installer FFmpeg&nbsp;?</summary>
+            <p>Non. FFmpeg 8.1 est inclus dans Cut et configuré automatiquement.</p>
+          </details>
+          <details>
+            <summary>Où sont mes réglages, et comment désinstaller Cut&nbsp;?</summary>
+            <p>Vos réglages (dossier d'export, volume, taille de fenêtre) sont enregistrés localement dans <code>%APPDATA%\Cut</code>. Pour désinstaller&nbsp;: <em>Paramètres → Applications → Cut → Désinstaller</em>. Les fichiers, raccourcis et caches sont supprimés&nbsp;; Cut vous demande si vous voulez aussi effacer vos réglages.</p>
+          </details>
+          <details>
+            <summary>Cut existe-t-il pour Mac ou Linux&nbsp;?</summary>
+            <p>Pas pour l'instant&nbsp;: Cut est conçu et testé pour Windows 10 et 11.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── À propos -->
+    <section class="section section-alt" id="a-propos">
+      <div class="wrap about">
+        <div class="avatar" aria-hidden="true">K</div>
+        <div class="about-text">
+          <p class="kicker">À propos</p>
+          <h2>Créé par Krimossimo</h2>
+          <p>
+            Cut est né d'un besoin très concret&nbsp;: découper mes propres VOD Twitch rapidement, sans lancer un logiciel de montage
+            et sans abîmer la qualité de mes vidéos. Je n'ai pas trouvé l'outil simple que je voulais… alors je l'ai fait.
+          </p>
+          <p>
+            L'idée reste la même à chaque version&nbsp;: une seule chose, bien faite. Pas d'abonnement, pas de compte, pas de
+            fonctionnalités inutiles.
+          </p>
+          <div class="socials" id="socials"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────── Ko-fi -->
+    <section class="section" id="soutenir">
+      <div class="wrap">
+        <div class="support">
+          <div class="support-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z" /><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" /><path d="M8 3.5c0 1 1 1 1 2s-1 1-1 2M12 3.5c0 1 1 1 1 2s-1 1-1 2" /></svg>
+          </div>
+          <div class="support-text">
+            <h2>Cut vous fait gagner du temps&nbsp;?</h2>
+            <p>Cut est gratuit et le restera. Si l'outil vous rend service, vous pouvez soutenir son développement avec un don sur Ko-fi&nbsp;: chaque café aide à ajouter de nouvelles fonctionnalités.</p>
+          </div>
+          <a class="btn btn-primary btn-large" data-link="kofi" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" /></svg>
+            Soutenir sur Ko-fi
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────────────────────────── Pied de page -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/mark.svg" alt="" width="15" height="18">
+        <span>Cut</span>
+        <span class="footer-copy">© <span id="year">2026</span> Krimossimo</span>
+      </div>
+      <nav class="footer-links" aria-label="Liens">
+        <a href="#telecharger">Télécharger</a>
+        <a data-link="github-repo" href="#">GitHub</a>
+        <a data-link="kofi" href="#" target="_blank" rel="noopener">Ko-fi</a>
+      </nav>
+      <p class="footer-legal">
+        Cut utilise <a href="https://ffmpeg.org" rel="noopener">FFmpeg</a> (licence GPL, build
+        <a href="https://github.com/BtbN/FFmpeg-Builds" rel="noopener">BtbN</a>),
+        <a href="https://www.electronjs.org" rel="noopener">Electron</a> (MIT) et la police
+        <a href="https://rsms.me/inter/" rel="noopener">Inter</a> (SIL OFL).
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
